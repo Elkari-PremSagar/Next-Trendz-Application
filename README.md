@@ -6,6 +6,11 @@ It is built using **React** with a strong focus on **clean code**, **scalable co
 This project was completed in **one week**, focusing on building a robust and maintainable frontend with a smooth user experience.
 
 ---
+# 🚀 Live Demo
+
+👉 (https://nxtTrendzprem.ccbp.tech)
+
+---
 
 ## 🚀 Project Overview
 
