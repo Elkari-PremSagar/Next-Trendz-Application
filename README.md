@@ -1,183 +1,126 @@
-In this project, let's build a **Nxt Trendz - Cart Features** by applying the concepts we have learned till now.
+🛒 Nxt Trendz – Online Shopping Application (Frontend)
+📌 Project Overview
 
-### Refer to the video below:
+Nxt Trendz is a responsive frontend e-commerce web application inspired by popular platforms like Amazon.
+The application was developed using React with a strong emphasis on clean code practices, scalable component architecture, and real-world frontend development concepts.
 
-<br/>
-<div style="text-align: center;">
-  <video style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12);outline:none;" loop="true" autoplay="autoplay" controls="controls" muted>
-    <source src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-output.mp4" type="video/mp4">
-  </video>
-</div>
-<br/>
+This project was completed in one week, with the primary focus on building a robust and maintainable frontend system that delivers a smooth user experience.
 
-### Design Files
+🎯 Learning Objectives
 
-<details>
-<summary>Click to view</summary>
+The main objective of this project was to apply and strengthen the following concepts:
 
-- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-sm-output-v0.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-lg-output.png)
+Authentication and authorization
 
-</details>
+State management using React Context API
 
-### Set Up Instructions
+Client-side routing and protected routes
 
-<details>
-<summary>Click to view</summary>
+Component-based architecture
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
+Responsive UI design
 
-### Completion Instructions
+Clean code guidelines and reusable components
 
-<details>
-<summary>Functionality to be added</summary>
-<br/>
+✨ Features
+🔐 Authentication
 
-The app must have the following functionalities
+User login functionality with validation
 
-- When an unauthenticated user tries to access the **Cart** Route, then the page should be navigated to **Login** Route
+Error handling for:
 
-- Following are the features to be implemented
+Invalid username
 
-  - Feature 1
+Invalid password
 
-    - When an authenticated user tries to add the same product multiple times
-      - The quantity of the product should be updated accordingly, and the count of the cart items in the header should be remained same
+Authentication persistence using cookies, allowing users to remain logged in after page reloads
 
-  - Feature 2
+🛍️ Product Browsing
 
-    - The total amount and number of items in the cart should be displayed in the **Cart** Route
+Search products by name
 
-  - Feature 3
+Sort products based on available criteria
 
-    - In each cart item in the cart
-      - When the plus icon is clicked, then the quantity of the product should be incremented by one
-      - When the minus icon is clicked, then the quantity of the product should be decremented by one
-      - When the quantity of the product is one and the minus icon is clicked, then the respective product should be removed from the cart
-      - Based on the quantity of the product, the product price and the Cart Summary, i.e the total cost should be updated accordingly
+Filter products using categories and ratings
 
-  - Feature 4
+View detailed product information
 
-    - When an authenticated user clicks on the remove button, cart item should be removed from the cart list
+🛒 Shopping Cart
 
-  - Feature 5
+Add products to the cart
 
-    - When an authenticated user clicks on the **Remove All** button, all the cart items should be removed from the cart and [Empty Cart View](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-empty-cart-view.png) should be displayed
+Increase or decrease product quantity
 
-- The `CartContext` has an object as a value with the following properties
-  - `cartList` - this key stores the cart items
-  - `removeAllCartItems` - this method is used to remove all the cart items in the `cartList`
-  - `addCartItem` - this method adds the cart item to the `cartList`
-  - `removeCartItem` - this method removes the cart item from the `cartList`
-  - `incrementCartItemQuantity` - this method increases the quantity of a product in the `cartList`
-  - `decrementCartItemQuantity` - this method decreases the quantity of a product in the `cartList`
+Remove individual items from the cart
 
-</details>
+Remove all items at once
 
-<details>
-<summary>Components Structure</summary>
+Cart state is managed globally using Context API
 
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-component-structure-breakdown.png" alt="component structure breakdown" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
+🧭 Navigation & Routing
 
-</details>
+Implemented using React Router
 
-<details>
-<summary>Implementation Files</summary>
-<br/>
+Protected routes to restrict access for unauthenticated users
 
-Use these files to complete the implementation:
+Smooth navigation between:
 
-- `src/App.js`
-- `src/components/Cart/index.js`
-- `src/components/Cart/index.css`
-- `src/components/CartItem/index.js`
-- `src/components/CartItem/index.css`
-- `src/components/CartSummary/index.js`
-- `src/components/CartSummary/index.css`
-</details>
+Login
 
-### Quick Tips
+Products
 
-<details>
-<summary>Click to view</summary>
-<br>
+Product Details
 
-- The `line-height` CSS property sets the height of a line box. It's commonly used to set the distance between lines of text
+Cart
 
-  ```
-  line-height: 1.5;
-  ```
+📱 Responsive Design
 
-    <br/>
-    <img src="https://assets.ccbp.in/frontend/react-js/line-height-img.png" alt="line height" style="width:90%; max-width: 600px;"/>
+Fully responsive across mobile, tablet, and desktop devices
 
-- The array method `find()` returns the first item's value that satisfies the provided testing function. If no item is found, it returns `undefined`
+Layout implemented using:
 
-  **Syntax**: `arr.find(Testing Function)`
+Flexbox
 
-</details>
+Media Queries
 
-### Important Note
+🧠 Technical Implementation
+State Management
 
-<details>
-<summary>Click to view</summary>
+Used React Context API to create a global cart state
 
-<br/>
+Avoided prop drilling by centralizing shared state
 
-**The following instructions are required for the tests to pass**
+Routing
 
-- `BsPlusSquare`, `BsDashSquare` icons from `react-icons` should be used for **plus** and **minus** buttons in cart item
-- The Cart Item should consist of two HTML button elements with data-testid attribute values as **plus** and **minus** respectively
-- `AiFillCloseCircle` icon from react-icons should be used for **remove** button in cartItem
-- The Cart Item should consist of an HTML button element with data-testid attribute values as **remove**
-- The product image in **Cart Item** Route should have the alt as `title` of the product
+Implemented client-side routing using React Router
 
-- Prime User credentials
+Protected routes ensure only authenticated users can access restricted pages
 
-  ```text
-   username: rahul
-   password: rahul@2021
-  ```
+API Integration
 
-- Non-Prime User credentials
+Integrated mock APIs for authentication and product data
 
-  ```text
-   username: raja
-   password: raja@2021
-  ```
+Backend complexity was intentionally avoided to focus on frontend architecture
 
-</details>
+Clean Code Practices
 
-### Resources
+Maintained a consistent folder structure
 
-<details>
-<summary>Colors</summary>
+Used meaningful and descriptive naming conventions
 
-<br/>
+Prefixed event handlers with on (e.g., onClickAddToCart)
 
-<div style="background-color: #0b69ff; width: 150px; padding: 10px; color: white">Hex: #0b69ff</div>
-<div style="background-color: #171f46; width: 150px; padding: 10px; color: white">Hex: #171f46</div>
-<div style="background-color: #616e7c; width: 150px; padding: 10px; color: white">Hex: #616e7c</div>
-<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
+Built reusable and modular components
 
-</details>
+Ensured separation of concerns across components
 
-<details>
-<summary>Font-families</summary>
-
-- Roboto
-
-</details>
-
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+🧩 Tech Stack
+Technology	Purpose
+React	UI development
+React Router	Client-side routing
+Context API	Global state management
+JavaScript (ES6+)	Application logic
+CSS	Styling
+Flexbox	Layout
+Media Queries	Responsive design
+Cookies	Authentication persistence
