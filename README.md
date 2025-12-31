@@ -126,6 +126,11 @@ This project was built to strengthen understanding of:
 | Cookies | Authentication Persistence |
 
 ---
+## 🔑 Login Credentials (For Testing)
+
+  - **username:** rahul  
+    **password:** rahul@2021  
+---
 
 ## 📂 Folder Structure
 
