@@ -1,153 +1,137 @@
-🛒 Nxt Trendz – Online Shopping Application (Frontend)
-📌 Project Overview
+# 🛒 Nxt Trendz – Online Shopping Application (Frontend)
 
-Nxt Trendz is a responsive frontend e-commerce web application inspired by popular platforms like Amazon.
-The application is built using React, with a strong focus on:
+Nxt Trendz is a **responsive frontend e-commerce web application** inspired by platforms like **Amazon**.  
+It is built using **React** with a strong focus on **clean code**, **scalable component architecture**, and **real-world frontend development practices**.
 
-Clean code practices
+This project was completed in **one week**, focusing on building a robust and maintainable frontend with a smooth user experience.
 
-Scalable component architecture
+---
 
-Real-world frontend development concepts
+## 🚀 Project Overview
+
+Nxt Trendz allows users to:
+- Authenticate securely
+- Browse and search products
+- Filter and sort products
+- View detailed product information
+- Manage a shopping cart
 
-⏳ This project was completed within one week, focusing on delivering a robust, maintainable, and user-friendly frontend experience.
+The application demonstrates **end-to-end frontend development skills** without backend complexity.
 
-🎯 Learning Objectives
+---
+
+## 🎯 Learning Objectives
+
+This project was built to strengthen understanding of:
+
+- Authentication & Authorization
+- React Context API for state management
+- Client-side routing & protected routes
+- Component-based architecture
+- Responsive UI design
+- Clean code & reusable components
 
-This project was developed to strengthen the following concepts:
+---
 
-🔐 Authentication & Authorization
+## ✨ Features
 
-🌐 Global State Management using React Context API
+### 🔐 Authentication
+- User login with validation
+- Error handling for:
+  - Invalid username
+  - Invalid password
+- Authentication persistence using **cookies**
+- Protected routes for authenticated users
 
-🧭 Client-side routing & Protected Routes
+---
 
-🧩 Component-based architecture
+### 🛍️ Product Browsing
+- Search products by name
+- Sort products by available criteria
+- Filter products using:
+  - Categories
+  - Ratings
+- View detailed product information
 
-📱 Responsive UI design
+---
 
-✨ Clean code & reusable components
+### 🛒 Shopping Cart
+- Add products to cart
+- Increase or decrease product quantity
+- Remove individual cart items
+- Remove all cart items at once
+- Global cart state using **React Context API**
 
-✨ Features
-🔐 Authentication
+---
 
-User login functionality with validation
+### 🧭 Navigation & Routing
+- Implemented using **React Router**
+- Protected routes prevent unauthorized access
+- Routes include:
+  - Login
+  - Products
+  - Product Details
+  - Cart
 
-Error handling for:
+---
 
-❌ Invalid username
+### 📱 Responsive Design
+- Mobile-first responsive layout
+- Supports:
+  - Mobile
+  - Tablet
+  - Desktop
+- Implemented using:
+  - Flexbox
+  - Media Queries
 
-❌ Invalid password
+---
 
-Authentication persistence using cookies, allowing users to stay logged in after page reloads
+## 🧠 Technical Implementation
 
-🛍️ Product Browsing
+### 🔄 State Management
+- Centralized global cart state using **Context API**
+- Eliminated prop drilling
 
-🔍 Search products by name
+### 🌐 Routing
+- Client-side routing with **React Router**
+- ProtectedRoute component for authentication checks
 
-🔃 Sort products based on available criteria
-
-🎯 Filter products by:
-
-Categories
-
-Ratings
-
-📄 View detailed product information
-
-🛒 Shopping Cart
-
-➕ Add products to the cart
-
-🔼 Increase product quantity
-
-🔽 Decrease product quantity
-
-❌ Remove individual items
-
-🗑️ Remove all items at once
-
-🌍 Cart state managed globally using Context API
-
-🧭 Navigation & Routing
-
-Implemented using React Router
-
-🔒 Protected routes for authenticated access only
-
-Smooth navigation between:
-
-Login
-
-Products
-
-Product Details
-
-Cart
-
-📱 Responsive Design
-
-Fully responsive across:
-
-📱 Mobile
-
-💻 Tablet
-
-🖥️ Desktop
-
-Layout implemented using:
-
-Flexbox
-
-Media Queries
-
-🧠 Technical Implementation
-🌍 State Management
-
-Used React Context API for global cart state
-
-Eliminated prop drilling by centralizing shared state
-
-🧭 Routing
-
-Client-side routing using React Router
-
-Protected routes restrict unauthenticated access
-
-🔌 API Integration
-
-Integrated mock APIs for authentication and product data
-
-Backend complexity intentionally avoided to focus on frontend design
-
-✨ Clean Code Practices
-
-Consistent and organized folder structure
-
-Meaningful naming conventions
-
-Event handlers prefixed with on (e.g., onClickAddToCart)
-
-Modular and reusable components
-
-Proper separation of concerns
-
-🧩 Tech Stack
-Technology	Purpose
-React	UI Development
-React Router	Client-side Routing
-Context API	Global State Management
-JavaScript (ES6+)	Application Logic
-CSS	Styling
-Flexbox	Layout
-Media Queries	Responsive Design
-Cookies	Authentication Persistence
-📂 Project Structure
+### 🔗 API Integration
+- Integrated mock APIs for:
+  - Authentication
+  - Product data
+- Focused on frontend architecture and logic
+
+### 🧹 Clean Code Practices
+- Consistent folder structure
+- Meaningful variable & function names
+- Event handlers prefixed with `on`
+- Reusable and modular components
+- Clear separation of concerns
+
+---
+
+## 🧩 Tech Stack
+
+| Technology | Purpose |
+|---------|--------|
+| React | UI Development |
+| React Router | Client-side Routing |
+| Context API | Global State Management |
+| JavaScript (ES6+) | Application Logic |
+| CSS | Styling |
+| Flexbox | Layout |
+| Media Queries | Responsive Design |
+| Cookies | Authentication Persistence |
+
+---
+
+## 📂 Folder Structure
+
+```text
 src/
-├── components/
-├── context/
-├── App.js
-├── index.js
-
-
-⚠️ All components are implemented inside the src/components directory as per project guidelines.
+ ├── components/
+ ├── context/
+ ├── App.js
+ ├── index.js
