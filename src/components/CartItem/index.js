@@ -1,8 +1,6 @@
 import {BsPlusSquare, BsDashSquare} from 'react-icons/bs'
 import {AiFillCloseCircle} from 'react-icons/ai'
-
 import CartContext from '../../context/CartContext'
-
 import './index.css'
 
 const CartItem = props => (
@@ -16,17 +14,9 @@ const CartItem = props => (
       const {cartItemDetails} = props
       const {id, title, brand, quantity, price, imageUrl} = cartItemDetails
 
-      const onRemoveCartItem = () => {
-        removeCartItem(id)
-      }
-      const onIncrementCartItem = () => {
-        incrementCartItemQuantity(id)
-      }
-      const onDecrementCartItem = () => {
-        decrementCartItemQuantity(id)
-      }
-
-      // TODO: Update the functionality to increment and decrement quantity of the cart item
+      const onRemoveCartItem = () => removeCartItem(id)
+      const onIncrementCartItem = () => incrementCartItemQuantity(id)
+      const onDecrementCartItem = () => decrementCartItemQuantity(id)
 
       return (
         <li className="cart-item">
@@ -45,7 +35,9 @@ const CartItem = props => (
               >
                 <BsDashSquare color="#52606D" size={12} />
               </button>
-              <p className="cart-quantity">{quantity}</p>
+              <p className="cart-quantity" data-testid={`quantity-${id}`}>
+                {quantity}
+              </p>
               <button
                 type="button"
                 className="quantity-controller-button"
